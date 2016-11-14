@@ -97,8 +97,7 @@ class Translation {
     generateTranslationHTML (key, options) {
         let optAttr = options
             ? ` data-i18n-options='${JSON.stringify(options)}'` : "";
-        let text = i18n.t(key, options === null ? undefined : options);
-        return `<span data-i18n="${key}"${optAttr}>${text}</span>`;
+        return `<span data-i18n="${key}"${optAttr}></span>`;
     }
 
     addLanguageChangedListener(listener) {
